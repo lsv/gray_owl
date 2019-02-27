@@ -122,13 +122,4 @@ class Import implements ImportInterface
         return array_merge($this->configurableProducts, $this->simpleProducts);
     }
 
-    /**
-     * Add product to the importer.
-     */
-    public function addProduct(ProductInterface $product): Import
-    {
-        $this->simpleProducts[] = $product;
-
-        return $this;
-    }
 }

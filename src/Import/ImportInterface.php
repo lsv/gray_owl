@@ -16,8 +16,4 @@ interface ImportInterface
      */
     public function getProducts(): array;
 
-    /**
-     * Add product to the importer.
-     */
-    public function addProduct(ProductInterface $product): Import;
 }

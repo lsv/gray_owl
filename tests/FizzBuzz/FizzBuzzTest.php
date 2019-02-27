@@ -54,12 +54,18 @@ class FizzBuzzTest extends TestCase
         $this->assertSame('FizzBuzz', $this->app->getResults(4, $fizz, $buzz));
     }
 
+    /**
+     * @test
+     */
     public function should_throw_a_exeception_when_testnumber_is_below_1(): void
     {
         $this->expectException(\RuntimeException::class);
         $this->app->getResults(0);
     }
 
+    /**
+     * @test
+     */
     public function should_throw_a_exeception_when_testnumber_is_above_100(): void
     {
         $this->expectException(\RuntimeException::class);
