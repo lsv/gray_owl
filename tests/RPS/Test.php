@@ -13,8 +13,8 @@ class Test extends TestCase
     public function testPlayer(): void
     {
         $player = new Player('name', 'hand');
-        $this->assertEquals('name', $player->getName());
-        $this->assertEquals('HAND', $player->getHand());
+        $this->assertSame('name', $player->getName());
+        $this->assertSame('HAND', $player->getHand());
     }
 
     public function validMatchesProvider(): array
@@ -70,7 +70,7 @@ class Test extends TestCase
     public function testValidMatches($players, $winner): void
     {
         $tournament = new RPSTournament($players);
-        $this->assertEquals($winner, $tournament->getWinner()->getName());
+        $this->assertSame($winner, $tournament->getWinner()->getName());
     }
 
     public function invalidMatchesProvider(): array
